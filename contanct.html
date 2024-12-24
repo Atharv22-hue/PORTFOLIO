@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <action action="/action_page.php">
+          <style>
+            .map{
+margin-left: 800px;
+margin-top: 400px;
+border: 2px solid black;
+
+            }
+      .form{
+        border: 1px solid black;
+        margin: 20px 20px 20px 20px;
+        padding: 20px 20px 20px 20px;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .form-group{
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: left;
+align-items: left;
+align-items: left;
+height: 400px;
+width: 200px;
+margin-bottom: 400px;
+padding: 20px 20px 20px 20px;
+
+            }
+            .form-control{
+              margin-left: 40%;      }
+          </style>
+           <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+              });
+            }
+          </script>
+      
+          <div class="form">
+          <form>
+            <action>
+              <div class="map">
+                <iframe
+                width="400"
+                height="600"
+                frameborder="0"
+                style="border:3px"
+                
+                src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                allowfullscreen
+              ></iframe>
+              </div>
+<center> <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" style="height: 20% ; width: 40%;" class="form-control" id="email">
+  
+ 
+    <label for="pwd">Password:</label>
+    <input type="password" style="height: 20% ; width: 40%;" class="form-control" id="pwd">
+ 
+Query: <input type="text" style="width: 20x; height:100px;"></input>
+
+  <br><button type="submit" class="btn btn-default">Submit</button>
+</div>
+</center> 
+</form>
+<action>
+
+</div>
+</html>
